@@ -1,10 +1,32 @@
 from django.shortcuts import render
 
-# Create your views here.
-#Las vistas en django son los Controladores
+# Importar el formulario a renderizar
+from web.formularios.formularioPlatos import FormularioPlatos
+from web.formularios.formularioPersonal import FormularioPersonal
 
-#Las vistas son funciones en python
+# Create your views here.
+# Las vistas en django son los Controladores
+
+# Las vistas son funciones en python
+
 
 def Home(request):
-    return render(request,'index.html')
+    return render(request, 'index.html')
 
+
+def Platos(request):
+    formulario = FormularioPlatos
+    datosTemplate = {
+        'formularioRegistro': formulario
+    }
+
+    return render(request, 'platos.html', datosTemplate)
+
+
+def Personal(request):
+    formulario = FormularioPersonal
+    datosTemplate = {
+        'formularioRegistro': formulario
+    }
+
+    return render(request, 'personal.html', datosTemplate)
