@@ -1,25 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="../static/styles/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <meta 
+      http-equiv="X-UA-Compatible" 
+      content="IE=edge"
+      >
+    <meta 
+      name="viewport" 
+      content="width=device-width, initial-scale=1.0"
+      >
+    <title> Herbario Restaurant </title>
+    <link 
+      rel="icon" 
+      href="../static/img/logo.png"  >
+    <link 
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" 
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" 
+      crossorigin="anonymous"
+      >
+    <link 
+      rel="stylesheet" 
+      href="../static/styles/styles.css"
+      >
+    <link 
+      rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      >
 </head>
 
 <body>
     <header>
-        {% include './shared/menu.html' %}
+        {% include './shared/header.html' %}
     </header>
 
     <main>
         <div class="banner">
-            <img src="../static/img/elherbario_logo.svg" alt="Logo Restaurant">
+            <img 
+            src="../static/img/elherbario_logo.svg" 
+            alt="Logo Restaurant"
+            >
         </div>
         <section class="container my-5">
             <div class="row justify-content-center">
@@ -37,15 +59,21 @@
         </section>
 
         <section>
-            <div class="container-fluid g-0">
+            <div class="container-fluid">
                 <div class="row ">
                     <div class="col-12 col-md-6 aling-self-center">
-                        <img src="../static/img/huerta.jpeg" alt="raton" class="img-fluid w-100">
+                        <img 
+                          src="../static/img/huerta.jpeg" 
+                          alt="raton" 
+                          class="img-fluid w-100">
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="row text-center">
                             <div class="col-12 col-md-6">
-                                <img src="../static/img/vegetal_1.jpg" alt="servicio 1" class="img-fluid w-100">
+                                <img 
+                                  src="../static/img/vegetal_1.jpg" 
+                                  alt="servicio 1" 
+                                  class="img-fluid w-100">
                                 <h2 class="fw-bold wow animate__animated animate__fadeInUp animate__repeat-1	animate__slow">SERVICIO EMPRESARIAL</h2>
                                 <p class="wow animate__animated animate__fadeInUp animate__repeat-1	animate__slow"> Lorem ipsum,
                                     dolor sit amet consectetur adipisicing elit. Quam aspernatur eum dolorem quas
@@ -75,21 +103,21 @@
                 <di v class="col-12 col-md-3">
                   <img
                     src="../static/img/plato1.jpg"
-                    alt=""
-                    class="img-fluid w-100 zoom wow animate__animated animate__fadeInLeft"
+                    alt="Imagen Menu"
+                    class="img-fluid w-100 zoom wow animate__animated  animate__fadeInLeft"
                   />
                 </di>
                 <div class="col-12 col-md-3">
                   <img
                     src="../static/img/plato2.jpg"
-                    alt=""
+                    alt="Imagen Menu"
                     class="img-fluid w-100 zoom wow animate__animated animate__fadeIn"
                   />
                 </div>
                 <div class="col-12 col-md-3">
                   <img
                     src="../static/img/plato3.jpg"
-                    alt=""
+                    alt="Imagen Menu"
                     class="img-fluid w-100 zoom wow animate__animated animate__fadeInRight"
                   />
                 </div>
@@ -100,33 +128,11 @@
             </div>
         </section>
     </main>
+
     <footer>
-        <div class="container-fluid mt-5">
-          <div class="row">
-            <div class="col-12 col-md-4">
-              <img
-                src="../static/img/elherbario_logo.svg"
-                alt="footer"
-                class="img-fluid w-100 footer-img"
-              />
-              <p>Lorem</p>
-              <p>Lorem</p>
-              <p>Lorem</p>
-              <p>Lorem</p>
-            </div>
-            <div class="col-12 col-md-8 my-1 text-center">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31731.430944554777!2d-75.59853748437503!3d6.207024900000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4429a96fcffe55%3A0x61f5f6024f48d1d8!2sProvenza!5e0!3m2!1ses-419!2sco!4v1665669313475!5m2!1ses-419!2sco"
-                class="w-75 maps"
-                height="400"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      </footer>
+      {% include './shared/footer.html' %}
+    </footer>
+   
       <!-- JavaScript Bundle with Popper -->
       <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
@@ -137,5 +143,5 @@
       <script>
         new WOW().init();
       </script>
-    </body>
+</body>
   </html>

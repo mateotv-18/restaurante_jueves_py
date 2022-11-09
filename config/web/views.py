@@ -30,3 +30,7 @@ def Personal(request):
     }
 
     return render(request, 'personal.html', datosTemplate)
+
+
+def Nosotros(request):
+    return render(request, 'nosotros.html')

@@ -23,7 +23,7 @@ class FormularioPlatos(forms.Form):
     descripcionPlato = forms.CharField(
         widget=forms.TextInput(attrs={'class': 'form-control mb-3'}),
         required=False,
-        max_length=30
+        max_length=30        
     )
 
     fotoPlato = forms.CharField(
