@@ -24,32 +24,32 @@
         {% include './shared/header.html' %}
     </header>
 
+   
+
     <main class="main">  
 
         {% if bandera %}
-            <script>
-                Swal.fire(
-                    'Good job!',
-                    'You clicked the button!',
-                    'success'
-                )
-            </script>
-        {% endif %}
-        
+        <script>
+            Swal.fire(
+                'Empleado Registrado Correctamente!'                   
+            )
+        </script>
+        {% endif %}   
+
         <div class="container-fluid">
-            <div class="row">
-                <figure class="col-12 col-md-4">
+            <div class="row g-5">
+                <figure class="col-12 col-md-4 ">
                     <img                        
-                        src="../static/img/v1.jpg" 
-                        alt="iamgen/plato"
+                        src="../static/img/banner_empleado.jpg" 
+                        alt="iamgen/Empleado"
                         class="img-fluid w-100 rounded-4 img-plato" 
                         loading="lazy"
                         />      
                 </figure>
                 <div class="col-12 col-md-8">
-                    <h1 class="title"> Registrar <br> Empleado </h1>
+                    <h1 class="title"> Registrar Empleado </h1>
                     <form method="POST" class="margin">
-                        {{formularioRegistro}}
+                        {{ formularioRegistroEmpleados }}
                         {% csrf_token %}
                         <div class="m-top">
                         <button type="submit" class="btn btn-outline-success button-views"> Enviar </button>

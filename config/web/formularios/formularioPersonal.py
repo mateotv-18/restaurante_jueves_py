@@ -41,6 +41,13 @@ class FormularioPersonal(forms.Form):
         label="Cargo"
     )
 
+    salarioEmpleado = forms.CharField(
+        widget=forms.NumberInput(attrs={'class': 'form-control mb-3', 'placeholder': 'Ingrese El salario del Empleado'}),
+        required=True,
+        max_length=8,
+        label="Salario"  
+    )
+
     telefonoEmpleado = forms.CharField(
         widget=forms.TextInput(attrs={'class': 'form-control mb-3', 'placeholder': 'Ingrese su Teléfono'}),
         required=True,

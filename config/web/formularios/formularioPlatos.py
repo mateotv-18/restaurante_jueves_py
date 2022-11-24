@@ -16,14 +16,14 @@ class FormularioPlatos(forms.Form):
     nombrePlato = forms.CharField(
         widget=forms.TextInput(attrs={'class': 'form-control mb-3 input-views', 'placeholder': 'Ingrese el Nombre del Plato'}),
         required=True,
-        max_length=10,
+        max_length=30,
         label='Nombre del plato'
     )
 
     descripcionPlato = forms.CharField(
         widget=forms.Textarea(attrs={'class': 'form-control mb-3 input-views', 'placeholder': 'Ingrese la descipción'}),
         required=False,
-        max_length=30,
+        max_length=100,
         label='Descripción'
     )
 

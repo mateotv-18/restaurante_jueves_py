@@ -25,27 +25,28 @@
     </header>
    
 
-    <main class="main">
+    <main class="main-menu">
         <div class="container">
             <div class="row row-cols-1 row-cols-md-3 g-5">
                 {% for plato in platos %}
                     <div class="col">
-                        <div class="card h-100 shadow card-update">
+                        <div class="card h-100 card-update">
                             <img 
                                 src="{{ plato.foto }}" 
                                 alt="Imagen Menu" 
                                 loading="lazy" 
-                                class="img-card" 
+                                class="card-img" 
                             />
                             <h4 class="title3">{{ plato.nombre }}</h4>
-                            <button class="button-views button-small" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample{{ plato.id }}">
+                            <p class="card-precio">${{ plato.precio }}</p>
+                            <button class="button-views button-small" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"> 
                                 Actualizar
                               </button>
 
-                              <div class="collapse" id="collapseExample{{plato.id}}">                                    
+                              <div class="collapse" id="collapseExample">                                    
                                 <div class="card card-body card-update border-none">
                                     <form action="{% url 'editarPlato' id=plato.id %}" method="POST">
-                                        {{ formulario }}
+                                        {{ formularioPlatos }}
                                         {% csrf_token %}
                                         <button type="submit" class="button-views button-small w-100 mt-5">Editar</button>
                                     </form>                             
